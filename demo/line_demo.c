@@ -68,8 +68,8 @@ draw_line2  (HPDF_Page    page,
 
 void
 draw_rect (HPDF_Page     page,
-           double        x,
-           double        y,
+  HPDF_REAL        x,
+  HPDF_REAL        y,
            const char   *label)
 {
     HPDF_Page_BeginText (page);
@@ -89,18 +89,18 @@ int main (int argc, char **argv)
     HPDF_Page page;
     char fname[256];
 
-    const HPDF_UINT16 DASH_MODE1[] = {3};
-    const HPDF_UINT16 DASH_MODE2[] = {3, 7};
-    const HPDF_UINT16 DASH_MODE3[] = {8, 7, 2, 7};
+    const HPDF_REAL DASH_MODE1[] = {3};
+    const HPDF_REAL DASH_MODE2[] = {3, 7};
+    const HPDF_REAL DASH_MODE3[] = {8, 7, 2, 7};
 
-    double x;
-    double y;
-    double x1;
-    double y1;
-    double x2;
-    double y2;
-    double x3;
-    double y3;
+    HPDF_REAL x;
+    HPDF_REAL y;
+    HPDF_REAL x1;
+    HPDF_REAL y1;
+    HPDF_REAL x2;
+    HPDF_REAL y2;
+    HPDF_REAL x3;
+    HPDF_REAL y3;
 
     float tw;
 

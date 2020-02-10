@@ -86,7 +86,7 @@ if(LIBHPDF_EXAMPLES)
   # =======================================================================
   install(
     TARGETS ${demos_NAMES} ${demos_with_grid_NAMES} grid_sheet
-    DESTINATION demo
+    DESTINATION bin
   )
   foreach(demo ${demos_NAMES} ${demos_with_grid_NAMES} grid_sheet)
     install(FILES ${demo}.c DESTINATION demo)
@@ -95,6 +95,6 @@ if(LIBHPDF_EXAMPLES)
   # install demo files
   install(
     DIRECTORY images mbtext pngsuite rawimage ttfont type1
-    DESTINATION demo
+    DESTINATION bin
   )
 endif(LIBHPDF_EXAMPLES)
