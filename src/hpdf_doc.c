@@ -25,6 +25,7 @@
 #include "hpdf_page_label.h"
 #include "hpdf.h"
 
+#include <string.h>
 
 static const char * const HPDF_VERSION_STR[6] = {
                 "%PDF-1.2\012%\267\276\255\252\012",

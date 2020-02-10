@@ -19,6 +19,7 @@
 #define _HPDF_CATALOG_H
 
 #include "hpdf_objects.h"
+#include "hpdf_font.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -90,6 +91,14 @@ HPDF_Catalog_SetViewerPreference  (HPDF_Catalog   catalog,
 
 HPDF_BOOL
 HPDF_Catalog_Validate  (HPDF_Catalog  catalog);
+
+const char*
+HPDF_Catalog_GetLocalFontName  (HPDF_Catalog  catalog,
+                                HPDF_Font     font);
+
+HPDF_STATUS
+HPDF_Catalog_AddInteractiveField (HPDF_Catalog  catalog,
+                                  HPDF_Dict     field);
 
 #ifdef __cplusplus
 }
