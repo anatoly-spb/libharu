@@ -201,7 +201,7 @@ int main (int argc, char **argv)
     #endif
 
     /* create outline root. */
-    root = HPDF_CreateOutline (pdf, NULL, "Encoding list", NULL);
+    root = HPDF_CreateOutline (pdf, NULL, "Encoding list", NULL, 0);
     HPDF_Outline_SetOpened (root, HPDF_TRUE);
 
     while (encodings[i]) {
@@ -213,7 +213,7 @@ int main (int argc, char **argv)
         HPDF_Page_SetWidth (page, PAGE_WIDTH);
         HPDF_Page_SetHeight (page, PAGE_HEIGHT);
 
-        outline = HPDF_CreateOutline (pdf, root, encodings[i], NULL);
+        outline = HPDF_CreateOutline (pdf, root, encodings[i], NULL, 0);
         dst = HPDF_Page_CreateDestination (page);
         HPDF_Destination_SetXYZ(dst, 0, HPDF_Page_GetHeight(page), 1);
         /* HPDF_Destination_SetFitB(dst); */

@@ -103,7 +103,7 @@ int main (int argc, char **argv)
     HPDF_SetPageMode(pdf, HPDF_PAGE_MODE_USE_OUTLINE);
 
     /* create outline root. */
-    root = HPDF_CreateOutline (pdf, NULL, "JP font demo", NULL);
+    root = HPDF_CreateOutline (pdf, NULL, "JP font demo", NULL, 0);
     HPDF_Outline_SetOpened (root, HPDF_TRUE);
 
     for (i = 0; i <= 15; i++) {
@@ -119,7 +119,7 @@ int main (int argc, char **argv)
 
         /* create outline entry */
         outline = HPDF_CreateOutline (pdf, root,
-                HPDF_Font_GetFontName (detail_font[i]), NULL);
+                HPDF_Font_GetFontName (detail_font[i]), NULL, 0);
         dst = HPDF_Page_CreateDestination (page);
         HPDF_Outline_SetDestination(outline, dst);
 

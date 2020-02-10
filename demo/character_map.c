@@ -258,7 +258,7 @@ main  (int      argc,
             min_h, max_h, min_l, max_l);
 
     /* create outline root. */
-    root = HPDF_CreateOutline (pdf, NULL, argv[1], NULL);
+    root = HPDF_CreateOutline (pdf, NULL, argv[1], NULL, 0);
     HPDF_Outline_SetOpened (root, HPDF_TRUE);
 
     for (i = 0; i <= 255; i++) {
@@ -277,7 +277,7 @@ main  (int      argc,
                     (unsigned int)(i * 256 + min_l),
                     (unsigned int)(i * 256 + max_l));
 #endif
-    outline = HPDF_CreateOutline (pdf, root, buf, NULL);
+    outline = HPDF_CreateOutline (pdf, root, buf, NULL, 0);
             dst = HPDF_Page_CreateDestination (page);
             HPDF_Outline_SetDestination(outline, dst);
 

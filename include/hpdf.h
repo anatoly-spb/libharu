@@ -59,6 +59,7 @@ typedef HPDF_HANDLE   HPDF_Page;
 typedef HPDF_HANDLE   HPDF_Pages;
 typedef HPDF_HANDLE   HPDF_Stream;
 typedef HPDF_HANDLE   HPDF_Image;
+typedef HPDF_HANDLE   HPDF_Boolean;
 typedef HPDF_HANDLE   HPDF_Font;
 typedef HPDF_HANDLE   HPDF_Outline;
 typedef HPDF_HANDLE   HPDF_Encoder;
@@ -908,6 +909,13 @@ HPDF_SetInfoAttr (HPDF_Doc        pdf,
 HPDF_EXPORT(const char*)
 HPDF_GetInfoAttr (HPDF_Doc        pdf,
                   HPDF_InfoType   type);
+
+HPDF_EXPORT(HPDF_Outline)
+HPDF_CreateOutline(HPDF_Doc       pdf,
+  HPDF_Outline   parent,
+  const char* title,
+  HPDF_Encoder   encoder,
+  HPDF_UINT16    unicode_len);
 
 
 HPDF_EXPORT(HPDF_STATUS)

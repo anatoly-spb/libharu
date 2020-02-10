@@ -98,15 +98,15 @@ int main(int argc, char **argv)
     print_page(page[2], 3);
 
     /* create outline root. */
-    root = HPDF_CreateOutline (pdf, NULL, "OutlineRoot", NULL);
+    root = HPDF_CreateOutline (pdf, NULL, "OutlineRoot", NULL, 0);
     HPDF_Outline_SetOpened (root, HPDF_TRUE);
 
-    outline[0] = HPDF_CreateOutline (pdf, root, "page1", NULL);
-    outline[1] = HPDF_CreateOutline (pdf, root, "page2", NULL);
+    outline[0] = HPDF_CreateOutline (pdf, root, "page1", NULL, 0);
+    outline[1] = HPDF_CreateOutline (pdf, root, "page2", NULL, 0);
 
     /* create outline with test which is ISO8859-2 encoding */
     outline[2] = HPDF_CreateOutline (pdf, root, "ISO8859-2 text гдежзий",
-                    HPDF_GetEncoder (pdf, "ISO8859-2"));
+                    HPDF_GetEncoder (pdf, "ISO8859-2"), 0);
 
     /* create destination objects on each pages
      * and link it to outline items.
