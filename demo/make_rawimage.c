@@ -19,7 +19,7 @@
 #include <setjmp.h>
 #include "hpdf.h"
 
-#ifndef HPDF_NOPNGLIB
+#ifdef HPDF_USE_PNGLIB
 
 jmp_buf env;
 
@@ -98,7 +98,7 @@ int main (int argc, char **argv)
 int main()
 {
     printf("WARNING: if you want to run this example, \n"
-           "make libhpdf with HPDF_NOPNGLIB option.\n");
+           "make libhpdf with HPDF_USE_PNGLIB option.\n");
     return 0;
 }
 
